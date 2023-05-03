@@ -12,23 +12,23 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     
-      steps:
+    steps:
       
-        - name: Checkout repository
-          uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
           
-        - name: Set up Node.js 16.x
-          uses: actions/setup-node@v3
-          with:
-            node-version: 16.x
+      - name: Set up Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
             
-        - name: Install dependencies
-          run: npm install
+      - name: Install dependencies
+        run: npm install
           
-        - name: Run the tests
-          run: npm run test -- --coverage
-          env:
-            CI: true
+      - name: Run the tests
+        run: npm run test -- --coverage
+        env:
+          CI: true
             
           
     
