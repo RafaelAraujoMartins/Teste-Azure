@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    
       - name: Configure SSH Google Cloud
         run: |
           mkdir -p ~/.ssh/
@@ -24,6 +23,7 @@ jobs:
             IdentityFile ~/.ssh/google-cloud.key
             StrictHostKeyChecking no
           END
+          
         env:
           SSH_USER: ${{ secrets.GOOGLE_CLOUD_SSH_USER }}
           SSH_KEY: ${{ secrets.GOOGLE_CLOUD_SSH_KEY }}
